@@ -2,3 +2,4 @@
 idea/
 out/
 advent-of-code.iml
+*.xml

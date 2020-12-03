@@ -1,9 +1,4 @@
 
+idea/
 out/
 advent-of-code.iml
-.idea/vcs.xml
-.idea/modules.xml
-.idea/misc.xml
-.idea/codeStyles/Project.xml
-.idea/codeStyles/codeStyleConfig.xml
-.idea/uiDesigner.xml

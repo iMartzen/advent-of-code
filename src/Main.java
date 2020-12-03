@@ -12,6 +12,6 @@ public class Main {
         Day1.Puzzle1();
         Day2.Puzzle2();
         Day2Part2.Puzzle2Part2();
-        Day3.day3();
+        Day3.Puzzle3();
     }
 }

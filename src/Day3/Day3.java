@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Day3 {
-    public static void day3() throws FileNotFoundException {
+    public static void Puzzle3() throws FileNotFoundException {
 
         Scanner scanner = new Scanner(new File("src/Day3/input"));
         ArrayList<String> lineArray = new ArrayList<>();

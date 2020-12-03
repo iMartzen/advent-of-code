@@ -1,4 +1,4 @@
-package Day3;
+package year2020.Day3;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Day3 {
     public static void Puzzle3() throws FileNotFoundException {
 
-        Scanner scanner = new Scanner(new File("src/Day3/input"));
+        Scanner scanner = new Scanner(new File("src/year2020/Day3/input"));
         ArrayList<String> lineArray = new ArrayList<>();
         while (scanner.hasNext()) {
             lineArray.add(new String(new char[500]).replace("\0", scanner.nextLine()));

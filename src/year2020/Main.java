@@ -1,7 +1,9 @@
-import Day1.Day1;
-import Day2.Day2;
-import Day2.Day2Part2;
-import Day3.Day3;
+package year2020;
+
+import year2020.Day1.Day1;
+import year2020.Day2.Day2;
+import year2020.Day2.Day2Part2;
+import year2020.Day3.Day3;
 
 import java.io.FileNotFoundException;
 

@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 public class Day4 {
     public static void Puzzle4() throws FileNotFoundException {
-
         File file = new File("src/year2020/Day4/input");
         Scanner scanner = new Scanner(file).useDelimiter("\n\n");
         ArrayList<String> lineArray = new ArrayList<>();

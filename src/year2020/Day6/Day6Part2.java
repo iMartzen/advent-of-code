@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Day6Part2 {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void Puzzle6Part2() throws FileNotFoundException {
         File file = new File("src/year2020/Day6/input");
         Scanner scanner = new Scanner(file).useDelimiter("\n\n");
         ArrayList<String> lineArray = new ArrayList<>();
@@ -24,7 +24,7 @@ public class Day6Part2 {
                     .count();
             sameFieldAnswer += count;
         }
-        System.out.println(sameFieldAnswer);
+        System.out.println("Day 6, Part 2: The sum of the questions everyone answered 'YES' are: " + sameFieldAnswer);
     }
 
     public static boolean allContainsChar(String[] group, String character) {

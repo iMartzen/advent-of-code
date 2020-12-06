@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Day6 {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void Puzzle6() throws FileNotFoundException {
         File file = new File("src/year2020/Day6/input");
         Scanner scanner = new Scanner(file).useDelimiter("\n\n");
         ArrayList<String> lineArray = new ArrayList<>();
@@ -20,6 +20,6 @@ public class Day6 {
             long collect = Arrays.stream(answersPerGroup.split("")).distinct().count();
             sameFieldAnswer += collect;
         }
-        System.out.println(sameFieldAnswer);
+        System.out.println("Day 6: The sum of the questions anyone answered with 'YES' are: " + sameFieldAnswer);
     }
 }

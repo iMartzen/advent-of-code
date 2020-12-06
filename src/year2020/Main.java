@@ -6,6 +6,7 @@ import year2020.Day2.Day2Part2;
 import year2020.Day3.Day3;
 import year2020.Day4.Day4;
 import year2020.Day4.Day4Part2;
+import year2020.Day5.Day5;
 import year2020.Day6.Day6;
 import year2020.Day6.Day6Part2;
 
@@ -20,6 +21,7 @@ public class Main {
         Day3.Puzzle3();
         Day4.Puzzle4();
         Day4Part2.Puzzle4Part2();
+        Day5.Puzzle5();
         Day6.Puzzle6();
         Day6Part2.Puzzle6Part2();
     }

@@ -9,6 +9,8 @@ import year2020.Day4.Day4Part2;
 import year2020.Day5.Day5;
 import year2020.Day6.Day6;
 import year2020.Day6.Day6Part2;
+import year2020.Day8.Day8;
+import year2020.Day8.Day8Part2;
 
 import java.io.FileNotFoundException;
 
@@ -24,5 +26,7 @@ public class Main {
         Day5.Puzzle5();
         Day6.Puzzle6();
         Day6Part2.Puzzle6Part2();
+        Day8.Puzzle8();
+        Day8Part2.Puzzle8Part2();
     }
 }

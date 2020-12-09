@@ -36,20 +36,18 @@ public class Bag {
     }
 
     static boolean containsBag(String bag) {
-        {
-            for (Bag.BagInfo subBag : bagList.get(bag)) {
-                if (subBag.subBagColor.equals("shiny gold")) {
-                    return true;
-                }
+        for (Bag.BagInfo subBag : bagList.get(bag)) {
+            if (subBag.subBagColor.equals("shiny gold")) {
+                return true;
             }
-
-            for (Bag.BagInfo subBag : bagList.get(bag)) {
-                if (containsBag(subBag.subBagColor)) {
-                    return true;
-                }
-            }
-            return false;
         }
+
+        for (Bag.BagInfo subBag : bagList.get(bag)) {
+            if (containsBag(subBag.subBagColor)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     static int countBag(String bag) {

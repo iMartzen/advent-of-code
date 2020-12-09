@@ -1,37 +1,63 @@
 package year2020.Day7;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Bag {
     String rootBagColor;
-    List<String> subBagColor = new ArrayList<>();
+    ArrayList<BagInfo> subBagInfo;
 
-    public Bag(String rootBagColor, String subBagString, List<String> input) {
+    static Map<String, ArrayList<BagInfo>> bagList = new HashMap<>();
 
-        //setRootBag
+    static class BagInfo {
+        public int quantity;
+        public String subBagColor;
+    }
+
+    Bag(String rootBagColor, String subBagString) {
+
         this.rootBagColor = rootBagColor.replace(" bags", "");
 
-        //put subBagColor in list
-        if (input.size() > 0 && !subBagString.contains("no other bags")) {
-            List<String> subBags = Arrays.asList(subBagString.split(", "));
-            for (int i = 0; i < subBags.size(); i++) {
-                this.subBagColor.add(subBags.get(i).substring(2).replace( " bags", ""));
+        ArrayList<BagInfo> bagInformation = new ArrayList<>();
+
+        if (!subBagString.contains("no other bags")) {
+            String[] subBags = subBagString.split(", ");
+            for (int i = 0; i < subBags.length; i++) {
+                BagInfo bagInfo = new BagInfo();
+                bagInfo.quantity = Integer.parseInt(subBags[i].substring(0, 1));
+                bagInfo.subBagColor = subBags[i].substring(2).replace(" bags", "");
+                bagInformation.add(bagInfo);
             }
+        }
+
+        this.subBagInfo = bagInformation;
+    }
+
+    static boolean containsBag(String bag) {
+        {
+            for (Bag.BagInfo subBag : bagList.get(bag)) {
+                if (subBag.subBagColor.equals("shiny gold")) {
+                    return true;
+                }
+            }
+
+            for (Bag.BagInfo subBag : bagList.get(bag)) {
+                if (containsBag(subBag.subBagColor)) {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 
-    //Does bag contain "shiny gold"?
-    public boolean containsBag(String rootBagColor){
-        if (rootBagColor.equals(this.rootBagColor)){
-            return true;
+    static int countBag(String bag) {
+        int count = 1;
+        List<Bag.BagInfo> goldBag = bagList.get(bag);
+        for (Bag.BagInfo subBag : goldBag) {
+            count += (subBag.quantity * countBag(subBag.subBagColor));
         }
-        for (int i = 0; i < subBagColor.size(); i++){
-            if (subBagColor.get(i).contains("shiny gold")){
-                return true;
-            }
-        }
-        return false;
+        return count;
     }
 }

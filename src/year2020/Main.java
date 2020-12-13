@@ -1,6 +1,10 @@
 package year2020;
 
 import year2020.Day1.Day1;
+import year2020.Day10.Day10;
+import year2020.Day10.Day10Part2;
+import year2020.Day12.Day12;
+import year2020.Day12.Day12Part2;
 import year2020.Day2.Day2;
 import year2020.Day2.Day2Part2;
 import year2020.Day3.Day3;
@@ -31,6 +35,12 @@ public class Main {
         Day7.Puzzle7();
         Day8.Puzzle8();
         Day8Part2.Puzzle8Part2();
-        Day9.puzzle9();
+        Day9.Puzzle9();
+        Day10.Puzzle10();
+//        [WIP] Day10Part2.Puzzle10Part2();
+//        [WIP] Day11.Puzzle11();
+//        [WIP] Day11Part2.Puzzle11Part2();
+        Day12.Puzzle12();
+        Day12Part2.Puzzle12Part2();
     }
 }

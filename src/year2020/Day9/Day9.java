@@ -7,19 +7,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Day9 {
-    public static void puzzle9() throws FileNotFoundException {
+    public static void Puzzle9() throws FileNotFoundException {
         File file = new File("src/year2020/Day9/input");
         Scanner scanner = new Scanner(file);
-
-        //create input
         List<Long> input = new ArrayList<>();
-
-        //fill input
         while (scanner.hasNextLong()) {
             input.add(scanner.nextLong());
         }
-
-        //create preamble
         for (int i = 25; i < input.size(); i++) {
             List<Long> preamble = input.subList(i - 25, i);
             long nextNumber = input.get(i);

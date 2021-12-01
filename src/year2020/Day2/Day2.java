@@ -13,8 +13,8 @@ public class Day2 {
             lineArray.add(scanner.nextLine());
         }
         int counterValidPassword = 0;
-        for (int i = 0; i < lineArray.size(); i++) {
-            String[] lines = lineArray.get(i).split(" ");
+        for (String s : lineArray) {
+            String[] lines = s.split(" ");
             String[] numbers = lines[0].split("-");
             int minValue = Integer.parseInt(numbers[0]);
             int maxValue = Integer.parseInt(numbers[1]);

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Day1 {
-    public static void Puzzle1() throws FileNotFoundException {
+    public static void Puzzle() throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("src/year2021/Day1/input"));
         ArrayList<Integer> lineArray = new ArrayList<>();
         while (scanner.hasNextInt()) {
@@ -20,6 +20,6 @@ public class Day1 {
                 increased++;
             }
         }
-        System.out.println("Day 1: The answer is: " + increased);
+        System.out.println("Day 1: This is how many measurements are larger than the previous measurement: " + increased);
     }
 }

@@ -22,14 +22,17 @@ public class Day2Part2 {
             String[] split = s.split(" ");
             String direction = split[0];
             int step = Integer.parseInt(split[1]);
-
-            if (direction.equals("forward")) {
-                horizontal = horizontal + step;
-                depth = depth + (aim * step);
-            } else if (direction.equals("up")) {
-                aim = aim - step;
-            } else {
-                aim = aim + step;
+            switch (direction){
+                case "forward":
+                    horizontal = horizontal + step;
+                    depth = depth + (aim * step);
+                    break;
+                case "up":
+                    aim = aim - step;
+                    break;
+                case "down":
+                    aim = aim + step;
+                    break;
             }
         }
         System.out.println("Day 2, Part 2: Multiplied final horizontal position by final depth = " + depth * horizontal);

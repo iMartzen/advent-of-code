@@ -4,6 +4,8 @@ import year2021.Day1.Day1;
 import year2021.Day1.Day1Part2;
 import year2021.Day2.Day2;
 import year2021.Day2.Day2Part2;
+import year2021.Day3.Day3;
+import year2021.Day3.Day3Part2;
 
 import java.io.FileNotFoundException;
 
@@ -14,6 +16,8 @@ public class Main {
         Day1Part2.Puzzle();
         Day2.Puzzle();
         Day2Part2.Puzzle();
+        Day3.Puzzle();
+        Day3Part2.Puzzle();
         System.out.println("[WIP] Day 3");
         System.out.println("[WIP] Day 3, Part 2");
         System.out.println("[WIP] Day 4");

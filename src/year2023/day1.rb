@@ -58,7 +58,6 @@ def extract_first_and_last_digits(line)
   [first_digit, last_digit]
 end
 
-
 sum2 = 0
 File.read('input/day1.txt').lines do |line|
   first_digit, last_digit = extract_first_and_last_digits(line)

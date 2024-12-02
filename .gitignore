@@ -3,3 +3,5 @@ idea/
 out/
 advent-of-code.iml
 *.xml
+day*.txt
+.flake8

@@ -45,5 +45,5 @@ def solution_day2_part2(input_file):
 
 
 input = os.path.join(os.path.dirname(__file__), "day2.txt")
-print(f"# veilige rapporten: {solution_day2_part1(input)}")
-print(f"# veilige rapporten met demper: {solution_day2_part2(input)}")
+print(f"Part 1: # veilige rapporten: {solution_day2_part1(input)}")
+print(f"Part 2: # veilige rapporten met demper: {solution_day2_part2(input)}")
